@@ -1,3 +1,4 @@
+
 public class Aula6 {
 
     public static void main(String[] args) {
@@ -22,13 +23,37 @@ public class Aula6 {
     //fim
 
     //Tipos numericos
-    //float x = 1.8F;
+    float X = 1.8F;
     double x = 4;
     double y = 4;
     System.out.println(x/y);
+    //fim
 
+    //começo PRIMEIRO
+    //Declarando variaveis da area
+    double areap;
 
+    //Raio da piscina
+    double raio=2;
 
+    //area da piscina
 
-    }
+    final double pi=3.14159;
+    areap = pi*raio*raio;
+    System.out.println("Area: " +areap);
+    //fim Primeiro
+
+    //começo SEGUNDO
+    //Declarando variaveis da area
+    double areap2;
+
+    //Raio da piscina
+    double raio2=2;
+
+    //area da piscina
+    final double PI=3.14159;
+    areap2 = Math.PI*Math.pow(raio2,2);
+    System.out.println("Area: " +areap2);
+    //fim SEGUNDO
+  }
 }
