@@ -1,7 +1,26 @@
-public class Aula7{
+public class Aula7 MODIFICADO PT 1{
+
+
 
   public static void main(String[] args){
-//JUNÇÃO DA AREA DA CASA COM A DA PISICINA
+
+AreaCasa();
+
+areap = areaPiscina();
+system.out.println("A area da pisicina è", +areap);
+
+system.out.println
+
+  }
+
+  static double areaPiscina(){
+  double raio = 2;
+
+  return(Math.PI * Math.pow(raio,2))
+  }
+
+  static double AreaCasa(){
+
     float lateral = 11;
     float cquarto = 7
     float areaq;
@@ -20,5 +39,8 @@ public class Aula7{
     System.out.println("A area total é "+areat);
     areap = Math.pow(raio,2);
     System.out.println("..."+ areap);
+
   }
+
+
 }
