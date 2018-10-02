@@ -1,40 +1,31 @@
-public class Aula7 MODIFICADO PT 1{
-
+public class AreaCasa {
 
 //Inicio no metodo Inicial
   public static void main(String[] args){
 
-double areap;
-double raio =2; //
+    double areap;
 
-AreaCasa();
-
-areaPiscina(raio);
-System.out.println(" A area da piscina e de"+ areap);
-
-
+AreaCasa(11,7);
+areap=areaPiscina(2);
+System.out.println("..."+areap);
 
   }
 //fim
 
 //Inicio no metodo areaPiscina
-  static double areaPiscina(double raio){
+static double areaPiscina(double raio){
   double raio = 2;
 
-  return(Math.PI * Math.pow(raio,2))
+return(Math.PI * Math.pow(raio,2));
   }
 //fim
 
 //Inicio no metodo AreaCasa
-  static double AreaCasa(){
+  static void AreaCasa(float lateral,float cquarto){
 
-    float lateral = 11;
-    float cquarto = 7
     float areaq;
     float areas;
     float areat;
-    double raio = 2;
-    double areap;
 
     System.out.println("PROGRAMA PARA CALCULO DE AREA DA CASA");
     areas = lateral*lateral;
