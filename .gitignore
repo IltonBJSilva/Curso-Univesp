@@ -27,10 +27,10 @@ hs_err_pid*
 
 #Programas java nao usado
 
-Aula5.java
-Aula6.java
-Aula7.java
-Aula8.java
-PrimeiroPrograma.java
+Aula5
+Aula6
+Aula7
+Aula8
+PrimeiroPrograma
 
 # End of https://www.gitignore.io/api/java
