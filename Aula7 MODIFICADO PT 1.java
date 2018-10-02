@@ -1,24 +1,31 @@
 public class Aula7 MODIFICADO PT 1{
 
 
-
+//Inicio no metodo Inicial
   public static void main(String[] args){
+
+double areap;
+double raio =2; //
 
 AreaCasa();
 
-areap = areaPiscina();
-system.out.println("A area da pisicina è", +areap);
+areaPiscina(raio);
+System.out.println(" A area da piscina e de"+ areap);
 
-system.out.println
+
 
   }
+//fim
 
-  static double areaPiscina(){
+//Inicio no metodo areaPiscina
+  static double areaPiscina(double raio){
   double raio = 2;
 
   return(Math.PI * Math.pow(raio,2))
   }
+//fim
 
+//Inicio no metodo AreaCasa
   static double AreaCasa(){
 
     float lateral = 11;
@@ -41,6 +48,8 @@ system.out.println
     System.out.println("..."+ areap);
 
   }
+  //fim nesse metodo
+
 
 
 }
