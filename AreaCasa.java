@@ -1,8 +1,11 @@
 public class AreaCasa {
+  static double ValorM2 = 1500;
 
 //Inicio no metodo Inicial
 public static void main(String[] args){
-
+	double preco;
+	preco = valor(-20);
+	System.out.println("O valor da construção è"+ preco);
     double areap;
 
   areaCasa(11,7);
@@ -36,12 +39,11 @@ static double areaPiscina(double raio) {
     System.out.println("A area total é "+areat);
     System.out.println("Area e igual a"+ areat);
 	System.out.println("****FIM****");
+	
   }
   //fim nesse metodo
   
-  //inicio
-  static double ValorM2 = 1500;
-  
+  //inicio  
   static double valor(double area){
 	  
 	return(ValorM2*area);
