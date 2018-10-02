@@ -25,7 +25,7 @@ static double areaPiscina(double raio) {
   float areaq;
   float areas;
   float areat;
-
+	System.out.println("****INICIO AREA CASA****");
     System.out.println("PROGRAMA PARA CALCULO DE AREA DA CASA");
     areas = lateral*lateral;
     System.out.println("A area da sala é "+areas);
@@ -34,16 +34,17 @@ static double areaPiscina(double raio) {
     System.out.println("A area do banheiro é "+areaq);
     areat = areas+2*areaq;
     System.out.println("A area total é "+areat);
-    System.out.println("..."+ areat);
-
+    System.out.println("Area e igual a"+ areat);
+	System.out.println("****FIM****");
   }
   //fim nesse metodo
   
   //inicio
-  static double ValorM2 - 1500;
+  static double ValorM2 = 1500;
   
   static double valor(double area){
-	return(valorM2*area);
+	  
+	return(ValorM2*area);
 	
   }
   //fim
