@@ -1,31 +1,30 @@
 public class AreaCasa {
 
 //Inicio no metodo Inicial
-  public static void main(String[] args){
+public static void main(String[] args){
 
     double areap;
 
-AreaCasa(11,7);
-areap=areaPiscina(2);
-System.out.println("..."+areap);
+  areaCasa(11,7);
+  areap=areaPiscina(2);
+  System.out.println("..."+areap);
 
   }
 //fim
 
 //Inicio no metodo areaPiscina
-static double areaPiscina(double raio){
-  double raio = 2;
-
-return(Math.PI * Math.pow(raio,2));
+static double areaPiscina(double raio) {
+    return(Math.PI*
+	Math.pow(raio,2));
   }
 //fim
 
 //Inicio no metodo AreaCasa
-  static void AreaCasa(float lateral,float cquarto){
+  static void areaCasa(float lateral,float cquarto) {
 
-    float areaq;
-    float areas;
-    float areat;
+  float areaq;
+  float areas;
+  float areat;
 
     System.out.println("PROGRAMA PARA CALCULO DE AREA DA CASA");
     areas = lateral*lateral;
@@ -35,12 +34,8 @@ return(Math.PI * Math.pow(raio,2));
     System.out.println("A area do banheiro é "+areaq);
     areat = areas+2*areaq;
     System.out.println("A area total é "+areat);
-    areap = Math.pow(raio,2);
-    System.out.println("..."+ areap);
+    System.out.println("..."+ areat);
 
   }
   //fim nesse metodo
-
-
-
 }
