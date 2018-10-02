@@ -15,12 +15,17 @@ public static void main(String[] args){
   }
 //fim
 
+
+
 //Inicio no metodo areaPiscina
 static double areaPiscina(double raio) {
     return(Math.PI*
 	Math.pow(raio,2));
   }
 //fim
+
+
+
 
 //Inicio no metodo AreaCasa
   static void areaCasa(float lateral,float cquarto) {
@@ -43,10 +48,19 @@ static double areaPiscina(double raio) {
   }
   //fim nesse metodo
   
+  
+  
+  
   //inicio  
   static double valor(double area){
 	  
-	return(ValorM2*area);
+	  if(area >=0){
+	  return(ValorM2*area);
+	  }
+	  else{
+		  return(-1);
+	  }
+	
 	
   }
   //fim
