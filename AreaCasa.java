@@ -40,7 +40,9 @@ static double areaPiscina(double raio) {
   //fim nesse metodo
   
   //inicio
-  static double valor(double aream valorM2){
+  static double ValorM2 - 1500;
+  
+  static double valor(double area){
 	return(valorM2*area);
 	
   }
