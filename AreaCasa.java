@@ -4,14 +4,19 @@ public class AreaCasa {
 //Inicio no metodo Inicial
 public static void main(String[] args){
 	double preco;
+	boolean valorDK = false;
+	
 	preco = valor(-20);
-	System.out.println("O valor da construção è"+ preco);
-    double areap;
-
+	if(preco >= 0){	valorDK = true; System.out.println("O valor da construção è:"+ preco);}
+    else{ 
+		valorDK = false;
+	}
+	
+	
+	double areap;
   areaCasa(11,7);
   areap=areaPiscina(2);
-  System.out.println("..."+areap);
-
+  System.out.println("Piscina valor:"+areap);
   }
 //fim
 
@@ -57,8 +62,9 @@ static double areaPiscina(double raio) {
 	  if(area >=0){
 	  return(ValorM2*area);
 	  }
+	  else{
 		  return(-1);
-	
+	  }
 	
   }
   //fim
