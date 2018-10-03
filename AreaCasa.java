@@ -57,9 +57,7 @@ static double areaPiscina(double raio) {
 	  if(area >=0){
 	  return(ValorM2*area);
 	  }
-	  else{
 		  return(-1);
-	  }
 	
 	
   }
