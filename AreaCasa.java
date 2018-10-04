@@ -18,6 +18,8 @@
     areaCasa(11,7);
     areap=areaPiscina(2);
     System.out.println("Piscina valor:"+areap);
+    System.out.println(valorPiscina(100,ALVENARIA));
+
     }
   //fim
 
@@ -77,6 +79,9 @@
     static double valorPiscina(double area, int material){
 
       double valor;
+      //caso em if e else
+
+      /*
       if(material == ALVENARIA) valor = 1500;
       else 
           if (material == VINIL)valor = 1100;
@@ -86,8 +91,15 @@
               if(material == PLASTICO) valor = 500;
                 else valor = -1;
            return(area*valor);
-    
+           */
+          //caso em switch case
+        
+    switch(material){
+      case ALVENARIA: return(area * 1500);
+      case VINIL: return(area * 1100);
+      case FIBRA:return(area * 750);
+      case PLASTICO: return(area * 500);
+      default: valor = -1;
+    }
   }
-
-
 }
