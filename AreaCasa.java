@@ -14,13 +14,18 @@
     }
 
 
-    double areap;
+    double areaP;
     areaCasa(11,7);
     areap=areaPiscina(2);
     System.out.println("Piscina valor:"+areap);
     System.out.println(valorPiscina(100,ALVENARIA));
 
+    //EXEMPLO COM WHILE
     while(tipo <= PLASTICO){
+      System.out.println(tipo+"\t\t"+valorPiscina(area,tipo));
+    }
+    //EXEMPLO COM FOR
+    for(int tipo = ALVENARIA; tipo<=PLASTICO; tipo=tipo+1){
       System.out.println(tipo+"\t\t"+valorPiscina(area,tipo));
     }
 
