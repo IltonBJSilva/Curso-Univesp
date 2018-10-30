@@ -25,15 +25,4 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-#Programas java nao usado
-
-Aula5
-Aula6
-Aula7
-Aula8
-PrimeiroPrograma
-
-#pastas
-C:\Users\ilton.silva\Desktop\repositorios\Java\PROJETOS*
-
 # End of https://www.gitignore.io/api/java
