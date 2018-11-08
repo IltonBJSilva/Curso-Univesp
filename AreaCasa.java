@@ -75,21 +75,33 @@ class AreaCasa {
        
         //for com arranjo que vai modifica com os ponto
         for(int val : a1)
-            System.out.print(val + ", ");
+        System.out.print(val + ", ");
         System.out.println();
-        for(int val : a2)
-            System.out.print(val + ", ");
+        for(int val : a2)   
+        System.out.print(val + ", ");
         System.out.println();
-       
-        //COMANDOS DE CARACTERES
-        char c;
-        c = 'a';
-        
+       char c = 'o';
+       char x = '\u00F6';
+       int y = 246;
+       int yy = 3;
+       char cc = (char) yy;
+       System.out.println(yy+'3');
+       System.out.println(c);
+       System.out.println(x);
+       System.out.println((char)y);
+       //fim
 
-        if(c == 'a')
-        System.out.println("a");
-        //FIM
-    }
+       //PERCORRER A TABELA ASCI
+       for(i = 32; i <= 126; i++){
+        System.out.println(ii+" : "+(char)i  );
+       }
+
+       for(int ii= 32; i <= 126; i++){
+         System.out.println((int)ii+" : "+ii );
+       }
+
+        
+        }
     //ARRANJOS NA MEMORIA EXEMPLO
     // for(int i=0; i<4; i++){
     //     System.out.println(preco[i]);
