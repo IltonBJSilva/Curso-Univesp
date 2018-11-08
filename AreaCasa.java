@@ -1,14 +1,16 @@
 class AreaCasa {
     //Materias da piscina
-    static final int alvenaria = 0;
-    static final int vinil = 1;
-    static final int fibra = 2;
-    static final int plastico = 3;
+    static final int ALVENARIA = 0;
+    static final int VINIL = 1;
+    static final int FIBRA = 2;
+    static final int PLASTICO = 3;
 
     //Preço dos materiais
     static double precos[] = {1500, 1100, 750, 500};
-
-    static double valorM2 = 1500; //Valor do metro quadrado
+    //OU
+    //static double precos[] = {1500, 1100, 750, 500};   
+    
+    static double valorM2 = 1500;
 
     //Area da casa
     static void areaCasa(float lateral, float comp_Quarto){
@@ -28,7 +30,7 @@ class AreaCasa {
         System.out.println("A área total é " + areaTotal);
     }
     else
-        System.out.println("Erro: parâmetro < 0");
+        System.out.println("erro: parametro <0");
     }
     //Valor do metrol quadrado de acordo com a area calculada
     static double valor(double area){
@@ -36,7 +38,7 @@ class AreaCasa {
     }
     //Valor metro quadrado para piscina
     static double valorPiscina(double area, int Material){
-        if(Material < alvenaria || Material > plastico || area < 0)
+        if(Material < ALVENARIA || Material > PLASTICO || area < 0)
             return(-1);
         return(area * precos[Material]);
     }
@@ -47,9 +49,9 @@ class AreaCasa {
     //Calculo da media do programa
     static double media(double[] arrays){
         double resp = 0;
-        for (double valor : arrays) {
-            resp += valor;
-        }
+        // for (double valor : arrays) {
+        //     resp += valor;
+        // }
         return(resp/arrays.length);
     }
     public static void main(String[] args){
@@ -67,4 +69,13 @@ class AreaCasa {
             System.out.print(val + ", ");
         System.out.println();
     }
+    //ARRANJOS NA MEMORIA EXEMPLO
+    // for(int i=0; i<4; i++){
+    //     System.out.println(preco[i]);
+    // }
+    // Exemplo com coisa no codigo  
+    // for(int i = ALVENARIA; i<PLASTICO; i++){
+    //     System.out.println(preco[i]);
+    // }
+    
 }
