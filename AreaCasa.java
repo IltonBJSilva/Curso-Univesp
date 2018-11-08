@@ -1,5 +1,5 @@
 
-// AULA DE ARRAYS E SEUS EXEMPLOS DE ARRAYS
+// AULA DE ARRAYS E SEUS EXEMPLOS DE ARRAYS E ANTIGA TAMBEM
 
 class AreaCasa {
     //Materias da piscina
@@ -61,18 +61,17 @@ class AreaCasa {
         System.out.println(media(precos));
         int[] a1 = {0, 1, 2, 3};
         int[] a2 = new int[4];
-        for (int i = 0; i < a1.length ; i++) {
-            a2[i] = a1[i];
-        }
-        a1[5] = 9;
-        for(int value0 : a1)
-            System.out.print(value0 + ", ");
+        a2 = a1;
+        a1[3] = 9;
+        //for com arranjo que vai modifca
+        for(int val : a1)
+            System.out.print(val + ", ");
         System.out.println();
-        for(int value0 : a2)
-            System.out.print(value0 + ", ");
+        for(int val : a2)
+            System.out.print(val + ", ");
         System.out.println();
         
-        
+     
     }
     //ARRANJOS NA MEMORIA EXEMPLO
     // for(int i=0; i<4; i++){
