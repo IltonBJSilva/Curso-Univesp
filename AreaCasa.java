@@ -35,20 +35,24 @@ class AreaCasa {
     else
         System.out.println("erro: parametro <0");
     }
+
     //Valor do metrol quadrado de acordo com a area calculada
     static double valor(double area){
         return(area>=0 ? valorM2 * area : -1);
     }
+
     //Valor metro quadrado para piscina
     static double valorPiscina(double area, int Material){
         if(Material < ALVENARIA || Material > PLASTICO || area < 0)
             return(-1);
         return(area * precos[Material]);
     }
+
     //A area da piscina calculada
     static double areaPiscina(double raio){
         return(raio >= 0 ? (Math.PI * Math.pow(raio, 2)) : -1);
     }
+
     //Calculo da media do programa
     static double media(double[] arrays){
         double resp = 0;
@@ -57,21 +61,34 @@ class AreaCasa {
         // }
         return(resp/arrays.length);
     }
+    
     public static void main(String[] args){
         System.out.println(media(precos));
         int[] a1 = {0, 1, 2, 3};
         int[] a2 = new int[4];
+        
+
+        //fala que a2 e igual a1
         a2 = a1;
+        //Modifca o numero na posição [3] que no caso e o 3 pra 9 entao fica {0,1,2,9} 
         a1[3] = 9;
-        //for com arranjo que vai modifca
+       
+        //for com arranjo que vai modifica com os ponto
         for(int val : a1)
             System.out.print(val + ", ");
         System.out.println();
         for(int val : a2)
             System.out.print(val + ", ");
         System.out.println();
+       
+        //COMANDOS DE CARACTERES
+        char c;
+        c = 'a';
         
-     
+
+        if(c == 'a')
+        System.out.println("a");
+        //FIM
     }
     //ARRANJOS NA MEMORIA EXEMPLO
     // for(int i=0; i<4; i++){
