@@ -317,7 +317,9 @@ class AreaCasa {
 
         }
         media /= valores[PLASTICO].length;
-        System.out.println("Média: "+media);
+        System.out.println("Média:  "+media);
+
+        
 
     }
 
