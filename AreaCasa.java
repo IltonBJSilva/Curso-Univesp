@@ -126,6 +126,14 @@ class AreaCasa {
     static char[] nVinil = { 'V', 'i', 'n', 'i', 'l' };
     static char[] nFibra = { 'F', 'i', 'b', 'r', 'a' };
     static char[] nPlastico = { 'P', 'l', 'a', 's', 't', 'i', 'c', 'o' };
+    
+    // Como se inicializa uma matriz
+    static char[][] nomes = {
+            {'A', 'l', 'v', 'e', 'n', 'a', 'r', 'i', 'a' }, 
+            { 'V', 'i', 'n', 'i', 'l' },
+            { 'F', 'i', 'b', 'r', 'a' }, 
+            { 'P', 'l', 'a', 's', 't', 'i', 'c', 'o'}
+        };
 
     //Materias da piscina
     static final int ALVENARIA = 0;
@@ -219,24 +227,111 @@ class AreaCasa {
        System.out.println((char)y);
        //fim
 
-       //PERCORRER A TABELA ASCI
-    //    for(int i = 32; i <= 126; i++){
-    //     System.out.println(i+" : "+(char)i  );
-    //    }
+    //    PERCORRER A TABELA ASCI
+       for(int i = 32; i <= 126; i++){
+        System.out.println(i+" : "+(char)i  );
+       }
 
-    //    for(int ii= 32; ii <= 126; ii++){
-    //      System.out.println((int)ii+" : "+ii );
-    //    }
+       for(int ii= 32; ii <= 126; ii++){
+         System.out.println((int)ii+" : "+ii );
+       }
+
         System.out.println("Piscina de ");
         System.out.println(nFibra);
         System.out.println(": "+ valorPiscina (100,FIBRA));
 
         //PARA ACESSAR UM ELEMENTO NO ARRAY E PRINTAR NA TELA
-        System.out.println(nVinil[1]);
-
+         System.out.println(nVinil[1]);
         //PARA MODIFICAR
         nVinil[1]= 'c';
         System.out.println(nVinil[1]);
+        System.out.println(nomes[1]);
+        //nomes[linha][coluna]
+        System.out.println(nomes[1][2]);
+
+        //Pegar pelo tamanho no array
+        System.out.println("Quantidade de linhas do array");        
+        System.out.println(nomes.length);
+
+        //Pega a quantidade de caracter
+        System.out.println("Quantidade de caracter que tem no array");
+        System.out.println(nomes[0].length);
+        System.out.println("------------------------");
         
+        //Mostra pro usuario a quantidade de caracter em cada linha na matriz
+        for(int i=0; i<4; i++){
+            System.out.println(nomes[i].length);
+            System.out.println(" ");
         }
+        
+        System.out.println();
+        
+        for(char[] nome : nomes){
+            
+            //o nome vai ser colado no arranjo
+            //[0] ALVENARIA-1
+            //[1] VINIL-----2
+            //[2] FIBRA-----3
+            //[3] PLASTICO--4
+            System.out.print(nome[2]);
+            System.out.print(nome.length);
+            System.out.print(" ");
+        }
+        System.out.println();
+        
+        //ja criar um arranjo com os valores definidado de tamanho
+        
+        // de linha e coluna
+        // static char[][] nomeli = new char[4][9];
+        
+        //quando se tem a quantidade de arranjo mas nao o tamanho dele
+        // static char[4][] nomeis = new char;
+        // char[] aux1 = {'A', 'l', 'v', 'e', 'n', 'a', 'r', 'i', 'a' }, 
+        // char[] aux2 = { 'V', 'i', 'n', 'i', 'l' };    
+        // nomeis[0] = aux1;
+        // nomeis[1] = aux2;
+        // System.out.print(nomeis[0]);
+        double[][] valores = new double[4][4];
+        carregaVal(valores);
+        //PRIMEIRA FORMA DE FAZER ISSO DE PERCORRER A MATRIZ
+        for(int i=0; i<valores.length; i++){
+            for(int j=0; j<valores[i].length; j++){
+                System.out.print(valores[i][j]+" ");
+                System.out.println();
+
+                }
+            }
+        //SEGUNDA FORMA DE FAZER ISSO DE PERCORRER A MATRIZ
+        System.out.println("-------------------------------------");
+        for(double[] linha : valores){
+            for(double valor : linha ){
+                System.out.print(valores+"  ");
+                System.out.println();
+            }
+        }
+        System.out.println("-------------------------------------");
+        System.out.println("Piscina de plastico de 150m2: "+valores[PLASTICO][2]);
+        double media = 0;
+        for(double valor : valores[PLASTICO]){
+            media += valor;
+
+        }
+        media /= valores[PLASTICO].length;
+        System.out.println("Média: "+media);
+
     }
+
+        /*Carrega os valores das piscinas na matriz de area X material */
+    public static void carregaVal(double[][] m){
+        for(int i=0; i<m.length; i++){//linhas (material)
+    
+            for(int j=50; j<=200; j+=50){ //coluna (material)
+                m[i][j / 50 - 1] = precos[i] * j;
+
+            }
+
+        }
+    
+    }
+
+}
