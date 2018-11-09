@@ -1,117 +1,11 @@
-
-// AULA DE ARRAYS E SEUS EXEMPLOS DE ARRAYS E ANTIGA TAMBEM
-
-class AreaCasa {
-    //Materias da piscina
-    static final int ALVENARIA = 0;
-    static final int VINIL = 1;
-    static final int FIBRA = 2;
-    static final int PLASTICO = 3;
-
-    //Preço dos materiais
-    static double precos[] = {1500, 1100, 750, 500};
-    //OU
-    //static double precos[] = {1500, 1100, 750, 500};   
-    
-    static double valorM2 = 1500;
-
-    //Area da casa
-    static void areaCasa(float lateral, float comp_Quarto){
-
-    //Verifica se os valores são positivos
-    if(lateral >= 0 && comp_Quarto >= 0){
-        float areaQuarto; // Area do quarto
-        float areaSala; // Area da sala
-        float areaTotal; // Area total
-        System.out.println("Programa para cálculo da área da casa");
-        areaSala = lateral * lateral;
-        System.out.println("A área da sala é " + areaSala);
-        areaQuarto = comp_Quarto * (lateral / 2);
-        System.out.println("A área do quarto é " + areaQuarto);
-        System.out.println("A área do banheiro é " + areaQuarto);
-        areaTotal = areaSala + 2 * areaQuarto;
-        System.out.println("A área total é " + areaTotal);
-    }
-    else
-        System.out.println("erro: parametro <0");
-    }
-
-    //Valor do metrol quadrado de acordo com a area calculada
-    static double valor(double area){
-        return(area>=0 ? valorM2 * area : -1);
-    }
-
-    //Valor metro quadrado para piscina
-    static double valorPiscina(double area, int Material){
-        if(Material < ALVENARIA || Material > PLASTICO || area < 0)
-            return(-1);
-        return(area * precos[Material]);
-    }
-
-    //A area da piscina calculada
-    static double areaPiscina(double raio){
-        return(raio >= 0 ? (Math.PI * Math.pow(raio, 2)) : -1);
-    }
-
-    //Calculo da media do programa
-    static double media(double[] arrays){
-        double resp = 0;
-        // for (double valor : arrays) {
-        //     resp += valor;
-        // }
-        return(resp/arrays.length);
-    }
-    
-    public static void main(String[] args){
-        System.out.println(media(precos));
-        int[] a1 = {0, 1, 2, 3};
-        int[] a2 = new int[4];
-        
-
-        //fala que a2 e igual a1
-        a2 = a1;
-        //Modifca o numero na posição [3] que no caso e o 3 pra 9 entao fica {0,1,2,9} 
-        a1[3] = 9;
-       
-        //for com arranjo que vai modifica com os ponto
-        for(int val : a1)
-        System.out.print(val + ", ");
-        System.out.println();
-        for(int val : a2)   
-        System.out.print(val + ", ");
-        System.out.println();
-       char c = 'o';
-       char x = '\u00F6';
-       int y = 246;
-       int yy = 3;
-       char cc = (char) yy;
-       System.out.println(yy+'3');
-       System.out.println(c);
-       System.out.println(x);
-       System.out.println((char)y);
-       //fim
-
-       //PERCORRER A TABELA ASCI
-       for(i = 32; i <= 126; i++){
-        System.out.println(ii+" : "+(char)i  );
-       }
-
-       for(int ii= 32; i <= 126; i++){
-         System.out.println((int)ii+" : "+ii );
-       }
-
-        
-        }
-    //ARRANJOS NA MEMORIA EXEMPLO
-    // for(int i=0; i<4; i++){
-    //     System.out.println(preco[i]);
-    // }
-    // Exemplo com coisa no codigo  
-    // for(int i = ALVENARIA; i<PLASTICO; i++){
-    //     System.out.println(preco[i]);
-    // int[] }
-    
-}
+//ARRANJOS NA MEMORIA EXEMPLO
+// for(int i=0; i<4; i++){
+//     System.out.println(preco[i]);
+// }
+// Exemplo com coisa no codigo  
+// for(int i = ALVENARIA; i<PLASTICO; i++){
+//     System.out.println(preco[i]);
+// int[] }
 
 
 
@@ -222,3 +116,127 @@ class AreaCasa {
 //          double[] preco = {1500, 1100, 750, 500};    
 //     }
 // }
+
+// AULA DE ARRAYS E SEUS EXEMPLOS DE ARRAYS E ANTIGA TAMBEM
+
+class AreaCasa {
+    // Um Arranjo de caracteres
+    /* NOMES DOS MATERIAIS */
+    static char[] nAlvenaria = { 'A', 'l', 'v', 'e', 'n', 'a', 'r', 'i', 'a' };
+    static char[] nVinil = { 'V', 'i', 'n', 'i', 'l' };
+    static char[] nFibra = { 'F', 'i', 'b', 'r', 'a' };
+    static char[] nPlastico = { 'P', 'l', 'a', 's', 't', 'i', 'c', 'o' };
+
+    //Materias da piscina
+    static final int ALVENARIA = 0;
+    static final int VINIL = 1;
+    static final int FIBRA = 2;
+    static final int PLASTICO = 3;
+
+    //Preço dos materiais
+    static double precos[] = {1500, 1100, 750, 500};
+    //OU
+    //static double precos[] = {1500, 1100, 750, 500};   
+    
+    static double valorM2 = 1500;
+
+    //Area da casa
+    static void areaCasa(float lateral, float comp_Quarto){
+
+    //Verifica se os valores são positivos
+    if(lateral >= 0 && comp_Quarto >= 0){
+        float areaQuarto; // Area do quarto
+        float areaSala; // Area da sala
+        float areaTotal; // Area total
+        System.out.println("Programa para cálculo da área da casa");
+        areaSala = lateral * lateral;
+        System.out.println("A área da sala é " + areaSala);
+        areaQuarto = comp_Quarto * (lateral / 2);
+        System.out.println("A área do quarto é " + areaQuarto);
+        System.out.println("A área do banheiro é " + areaQuarto);
+        areaTotal = areaSala + 2 * areaQuarto;
+        System.out.println("A área total é " + areaTotal);
+    }
+    else
+        System.out.println("erro: parametro <0");
+    }
+
+    //Valor do metrol quadrado de acordo com a area calculada
+    static double valor(double area){
+        return(area>=0 ? valorM2 * area : -1);
+    }
+
+    //Valor metro quadrado para piscina
+    static double valorPiscina(double area, int Material){
+        if(Material < ALVENARIA || Material > PLASTICO || area < 0)
+            return(-1);
+        return(area * precos[Material]);
+    }
+
+    //A area da piscina calculada
+    static double areaPiscina(double raio){
+        return(raio >= 0 ? (Math.PI * Math.pow(raio, 2)) : -1);
+    }
+
+    //Calculo da media do programa
+    static double media(double[] arrays){
+        double resp = 0;
+        // for (double valor : arrays) {
+        //     resp += valor;
+        // }
+        return(resp/arrays.length);
+    }
+    
+    public static void main(String[] args){
+        System.out.println(media(precos));
+        int[] a1 = {0, 1, 2, 3};
+        int[] a2 = new int[4];
+        
+
+        //fala que a2 e igual a1
+        a2 = a1;
+        //Modifca o numero na posição [3] que no caso e o 3 pra 9 entao fica {0,1,2,9} 
+        a1[3] = 9;
+       
+        //for com arranjo que vai modifica com os ponto
+        for(int val : a1){
+        System.out.print(val + ", ");
+        System.out.println();
+        }
+        for(int val : a2){   
+        System.out.print(val + ", ");
+        System.out.println();
+        }
+
+       char c = 'o';
+       char x = '\u00F6';
+       int y = 246;
+       int yy = 3;
+       char cc = (char) yy;
+       System.out.println(yy+'3');
+       System.out.println(c);
+       System.out.println(x);
+       System.out.println((char)y);
+       //fim
+
+       //PERCORRER A TABELA ASCI
+    //    for(int i = 32; i <= 126; i++){
+    //     System.out.println(i+" : "+(char)i  );
+    //    }
+
+    //    for(int ii= 32; ii <= 126; ii++){
+    //      System.out.println((int)ii+" : "+ii );
+    //    }
+        System.out.println("Piscina de ");
+        System.out.println(nFibra);
+        System.out.println(": "+ valorPiscina (100,FIBRA));
+
+        //PARA ACESSAR UM ELEMENTO NO ARRAY E PRINTAR NA TELA
+        System.out.println(nVinil[1]);
+
+        //PARA MODIFICAR
+        nVinil[1]= 'c';
+        System.out.println(nVinil[1]);
+        
+        }
+    }
