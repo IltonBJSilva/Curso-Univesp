@@ -194,12 +194,19 @@ class AreaCasa {
         // }
         return(resp/arrays.length);
     }
-    
     public static void main(String[] args){
         System.out.println(media(precos));
         int[] a1 = {0, 1, 2, 3};
         int[] a2 = new int[4];
+       
+        //Matrizes dos descontos e valores
+        double[][] valores = new double[4][4];
+        double[][] descontos = {{0,0,0.2,0.2}, {0.05,0.05,0.1,0.15}, {0.02,0.04,0.08,0.16}, {0,0,0,0.05}};
+        double [][] pFinal;
+        carregaVal(valores);
+        pFinal = calculaFinal(valores, descontos);
         
+
 
         //fala que a2 e igual a1
         a2 = a1;
@@ -291,7 +298,6 @@ class AreaCasa {
         // nomeis[0] = aux1;
         // nomeis[1] = aux2;
         // System.out.print(nomeis[0]);
-        double[][] valores = new double[4][4];
         carregaVal(valores);
         //PRIMEIRA FORMA DE FAZER ISSO DE PERCORRER A MATRIZ
         for(int i=0; i<valores.length; i++){
@@ -335,5 +341,68 @@ class AreaCasa {
         }
     
     }
+    public static double[][] calculaFinal(double [][] val,double [][] desc){
+        double[][] saida = new double [val.length][val[0].length];
+        for (int i=0; i < saida.length; i++){
+            for (int j=0; j<saida[0].length; j++){
+                saida[i][j] = val[i][j]*(1-desc[i][j]);
+            }
+        }
+    return(saida);
+    }
+    
+    //Somando as matrizes
+        static double[][] somaMatrizes(double[][] a, double[][] b){
+        if(a.length != b.length || a[0].length != b[0].length){
+            return null;
+        }else{
+            double [][]res = new double[a.length][a[0].length];
+            for(int i=0; i<res.length; i++){    
+                for(int j = 0; j<res[0].length; j++){
+                    res[i][j] = a[i][j]  + b[i][j];
+                   
+                }
+            }
+            
+        return res; 
+    }
+  }
+  
+    // Subtração de matrizes
+    // static double[][] somaMatrizes(double[][] a, double[][] b) {
+    //     if (a.length != b.length || a[0].length != b[0].length) {
+    //         return null;
+    //     } else {
+    //         double[][] res = new double[a.length][a[0].length];
+    //         for (int ii = 0; ii < res.length; ii++) {
+    //             for (int jj = 0; jj < res[0].length; jj++) {
+    //                 res[ii][jj] = a[ii][jj] - b[ii][jj];
 
+    //             }
+    //         }
+
+    //         return res;
+    //     }
+    // }
+
+  //Metodo para imprimir a matriz tabulada com \t
+    static void imprimeMatriz(double[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print("---------AQUI---------");
+                System.out.print(matriz[i][j]+"\t");
+            }
+            System.out.println();
+        }
+    }
+    //Matriz tranposta que inves de 3x4 vira 4x3
+    static double[][] tranporMatriz(double[][] m){
+        double[][]trans = new double[m[0].length][m.length];
+        for(int i=0; i<m.length; i++){
+            for(int j=0; j<m[0].length; j++){
+                trans[j][i] = m[i][j];
+            }
+        }
+        return trans;
+    }
 }
