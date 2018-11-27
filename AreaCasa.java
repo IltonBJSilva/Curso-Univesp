@@ -1,124 +1,3 @@
-//ARRANJOS NA MEMORIA EXEMPLO
-// for(int i=0; i<4; i++){
-//     System.out.println(preco[i]);
-// }
-// Exemplo com coisa no codigo  
-// for(int i = ALVENARIA; i<PLASTICO; i++){
-//     System.out.println(preco[i]);
-// int[] }
-
-
-
-/*AULAS 01 AS AULAS 13*/
-// public class AreaCasa {
-//     static double ValorM2 = 1500;
-//     // Inicio no metodo Inicial
-//     public static void main(String[] args) {
-//         System.out.print("*Oi a todos os seres humanos*");
-//         double preco;
-//         boolean valorDK = false;
-
-//         preco = valor(-20);
-//         if (preco >= 0) {
-//             valorDK = true;
-//             System.out.print("O valor da construção è:" + preco);
-//         } else {
-//             valorDK = false;
-//         }
-
-//         double areap;
-//         areaCasa(11, 7);
-//         areap = areaPiscina(2);
-//         System.out.println("Piscina valor:" + areap);
-//         System.out.println(valorPiscina(100, ALVENARIA));
-//         int tipo = 0;
-//         while (tipo <= PLASTICO) {
-//             System.out.println(tipo + "\t\t" + valorPiscina(areap, tipo));
-//         }
-
-//     }
-//     // fim
-
-//     // Inicio no metodo areaPiscina
-//     static double areaPiscina(double raio) {
-//         if (raio >= 0)
-//             return Math.PI * Math.pow(raio, 2);
-//         else
-//             return (-1);
-//     }
-//     // fim
-
-//     // Inicio no metodo AreaCasa
-//     static void areaCasa(float lateral, float cquarto) {
-//         float areaq, areas, areat;
-//         if (lateral < 0 && cquarto >= 0)
-//             System.out.println("Erro: Latareal da sala < 0");
-//         System.out.println("Erro: lateral do quarto < 0");
-//         System.out.println("****INICIO AREA CASA****");
-//         System.out.println("PROGRAMA PARA CALCULO DE AREA DA CASA");
-//         areas = lateral * lateral;
-//         System.out.println("A area da sala é " + areas);
-//         areaq = cquarto * (lateral / 2);
-//         System.out.println("A area do quarto é " + areaq);
-//         System.out.println("A area do banheiro é " + areaq);
-//         areat = areas + 2 * areaq;
-//         System.out.println("A area total é " + areat);
-//         System.out.println("Area e igual a" + areat);
-//         System.out.println("****FIM****");
-//     }
-//     /*
-//      * else if System.out.println("Erro: paramentro <0");
-//      */
-
-//     // fim nesse metodo
-
-//     // inicio
-//     static double valor(double area) {
-
-//         if (area >= 0) {
-//             return (ValorM2 * area);
-//         } else {
-//             return (-1);
-//         }
-
-//     }
-//     // fim
-
-//     static final int ALVENARIA = 0;
-//     static final int VINIL = 1;
-//     static final int FIBRA = 2;
-//     static final int PLASTICO = 3;
-
-//     static double valorPiscina(double area, int material) {
-
-//         double valor;
-//         // caso em if e else
-
-//         /*
-//          * if(material == ALVENARIA) valor = 1500; else if (material == VINIL)valor =
-//          * 1100; else if (material == FIBRA)valor = 750; else if(material == PLASTICO)
-//          * valor = 500; else valor = -1; return(area*valor);
-//          */
-//          //caso em switch case
-//         //  switch (material) {
-//         //  case ALVENARIA:
-//         //      return (area * 1500);
-//         //  case VINIL:
-//         //      return (area * 1100);
-//         //  case FIBRA:
-//         //      return (area * 750);
-//         //  case PLASTICO:
-//         //      return (area * 500);
-//         //  default:
-//         //      valor = -1;
-//         // }
-//         //CASO COM ARRAYS
-//          double[] preco = {1500, 1100, 750, 500};    
-//     }
-// }
-
-// AULA DE ARRAYS E SEUS EXEMPLOS DE ARRAYS E ANTIGA TAMBEM
-
 class AreaCasa {
     // Um Arranjo de caracteres
     /* NOMES DOS MATERIAIS */
@@ -286,18 +165,7 @@ class AreaCasa {
         }
         System.out.println();
         
-        //ja criar um arranjo com os valores definidado de tamanho
-        
-        // de linha e coluna
-        // static char[][] nomeli = new char[4][9];
-        
-        //quando se tem a quantidade de arranjo mas nao o tamanho dele
-        // static char[4][] nomeis = new char;
-        // char[] aux1 = {'A', 'l', 'v', 'e', 'n', 'a', 'r', 'i', 'a' }, 
-        // char[] aux2 = { 'V', 'i', 'n', 'i', 'l' };    
-        // nomeis[0] = aux1;
-        // nomeis[1] = aux2;
-        // System.out.print(nomeis[0]);
+     
         carregaVal(valores);
         //PRIMEIRA FORMA DE FAZER ISSO DE PERCORRER A MATRIZ
         for(int i=0; i<valores.length; i++){
@@ -368,22 +236,7 @@ class AreaCasa {
     }
   }
   
-    // Subtração de matrizes
-    // static double[][] somaMatrizes(double[][] a, double[][] b) {
-    //     if (a.length != b.length || a[0].length != b[0].length) {
-    //         return null;
-    //     } else {
-    //         double[][] res = new double[a.length][a[0].length];
-    //         for (int ii = 0; ii < res.length; ii++) {
-    //             for (int jj = 0; jj < res[0].length; jj++) {
-    //                 res[ii][jj] = a[ii][jj] - b[ii][jj];
 
-    //             }
-    //         }
-
-    //         return res;
-    //     }
-    // }
 
   //Metodo para imprimir a matriz tabulada com \t
     static void imprimeMatriz(double[][] matriz) {
