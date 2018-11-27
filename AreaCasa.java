@@ -35,17 +35,17 @@ class AreaCasa {
         float areaQuarto; // Area do quarto
         float areaSala; // Area da sala
         float areaTotal; // Area total
-        System.out.println("Programa para cálculo da área da casa");
+        // System.out.println("Programa para cálculo da área da casa");
         areaSala = lateral * lateral;
-        System.out.println("A área da sala é " + areaSala);
+        // System.out.println("A área da sala é " + areaSala);
         areaQuarto = comp_Quarto * (lateral / 2);
-        System.out.println("A área do quarto é " + areaQuarto);
-        System.out.println("A área do banheiro é " + areaQuarto);
+        // System.out.println("A área do quarto é " + areaQuarto);
+        // System.out.println("A área do banheiro é " + areaQuarto);
         areaTotal = areaSala + 2 * areaQuarto;
-        System.out.println("A área total é " + areaTotal);
+        // System.out.println("A área total é " + areaTotal);
     }
     else
-        System.out.println("erro: parametro <0");
+          System.out.println("erro: parametro <0");
     }
 
     //Valor do metrol quadrado de acordo com a area calculada
@@ -74,7 +74,7 @@ class AreaCasa {
         return(resp/arrays.length);
     }
     public static void main(String[] args){
-        System.out.println(media(precos));
+        // System.out.println(media(precos));
         int[] a1 = {0, 1, 2, 3};
         int[] a2 = new int[4];
        
@@ -94,12 +94,12 @@ class AreaCasa {
        
         //for com arranjo que vai modifica com os ponto
         for(int val : a1){
-        System.out.print(val + ", ");
-        System.out.println();
+        // System.out.print(val + ", ");
+        // System.out.println();
         }
         for(int val : a2){   
-        System.out.print(val + ", ");
-        System.out.println();
+        // System.out.print(val + ", ");
+        // System.out.println();
         }
 
        char c = 'o';
@@ -107,50 +107,50 @@ class AreaCasa {
        int y = 246;
        int yy = 3;
        char cc = (char) yy;
-       System.out.println(yy+'3');
-       System.out.println(c);
-       System.out.println(x);
-       System.out.println((char)y);
+    //    System.out.println(yy+'3');
+    //    System.out.println(c);
+    //    System.out.println(x);
+    //    System.out.println((char)y);
        //fim
 
     //    PERCORRER A TABELA ASCI
        for(int i = 32; i <= 126; i++){
-        System.out.println(i+" : "+(char)i  );
+        // System.out.println(i+" : "+(char)i  );
        }
 
        for(int ii= 32; ii <= 126; ii++){
-         System.out.println((int)ii+" : "+ii );
+        //  System.out.println((int)ii+" : "+ii );
        }
 
-        System.out.println("Piscina de ");
-        System.out.println(nFibra);
-        System.out.println(": "+ valorPiscina (100,FIBRA));
+        // System.out.println("Piscina de ");
+        // System.out.println(nFibra);
+        // System.out.println(": "+ valorPiscina (100,FIBRA));
 
         //PARA ACESSAR UM ELEMENTO NO ARRAY E PRINTAR NA TELA
-         System.out.println(nVinil[1]);
+        //  System.out.println(nVinil[1]);
         //PARA MODIFICAR
         nVinil[1]= 'c';
-        System.out.println(nVinil[1]);
-        System.out.println(nomes[1]);
+        // System.out.println(nVinil[1]);
+        // System.out.println(nomes[1]);
         //nomes[linha][coluna]
-        System.out.println(nomes[1][2]);
+        // System.out.println(nomes[1][2]);
 
         //Pegar pelo tamanho no array
-        System.out.println("Quantidade de linhas do array");        
-        System.out.println(nomes.length);
+        // System.out.println("Quantidade de linhas do array");        
+        // System.out.println(nomes.length);
 
         //Pega a quantidade de caracter
-        System.out.println("Quantidade de caracter que tem no array");
-        System.out.println(nomes[0].length);
-        System.out.println("------------------------");
+        // System.out.println("Quantidade de caracter que tem no array");
+        // System.out.println(nomes[0].length);
+        // System.out.println("------------------------");
         
         //Mostra pro usuario a quantidade de caracter em cada linha na matriz
         for(int i=0; i<4; i++){
-            System.out.println(nomes[i].length);
-            System.out.println(" ");
+            // System.out.println(nomes[i].length);
+            // System.out.println(" ");
         }
         
-        System.out.println();
+        // System.out.println();
         
         for(char[] nome : nomes){
             
@@ -159,19 +159,19 @@ class AreaCasa {
             //[1] VINIL-----2
             //[2] FIBRA-----3
             //[3] PLASTICO--4
-            System.out.print(nome[2]);
-            System.out.print(nome.length);
-            System.out.print(" ");
+            // System.out.print(nome[2]);
+            // System.out.print(nome.length);
+            // System.out.print(" ");
         }
-        System.out.println();
+        // System.out.println();
         
      
         carregaVal(valores);
         //PRIMEIRA FORMA DE FAZER ISSO DE PERCORRER A MATRIZ
         for(int i=0; i<valores.length; i++){
             for(int j=0; j<valores[i].length; j++){
-                System.out.print(valores[i][j]+" ");
-                System.out.println();
+                // System.out.print(valores[i][j]+" ");
+                // System.out.println();
 
                 }
             }
@@ -179,19 +179,19 @@ class AreaCasa {
         System.out.println("-------------------------------------");
         for(double[] linha : valores){
             for(double valor : linha ){
-                System.out.print(valores+"  ");
-                System.out.println();
+                // System.out.print(valores+"  ");
+                // System.out.println();
             }
         }
-        System.out.println("-------------------------------------");
-        System.out.println("Piscina de plastico de 150m2: "+valores[PLASTICO][2]);
+        // System.out.println("-------------------------------------");
+        // System.out.println("Piscina de plastico de 150m2: "+valores[PLASTICO][2]);
         double media = 0;
         for(double valor : valores[PLASTICO]){
             media += valor;
 
         }
         media /= valores[PLASTICO].length;
-        System.out.println("Média:  "+media);
+        // System.out.println("Média:  "+media);
 
         
 
@@ -242,10 +242,10 @@ class AreaCasa {
     static void imprimeMatriz(double[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print("---------AQUI---------");
-                System.out.print(matriz[i][j]+"\t");
+                // System.out.print("---------AQUI---------");
+                // System.out.print(matriz[i][j]+"\t");
             }
-            System.out.println();
+            // System.out.println();
         }
     }
     //Matriz tranposta que inves de 3x4 vira 4x3
@@ -257,5 +257,12 @@ class AreaCasa {
             }
         }
         return trans;
+    }
+}
+class Rede_soma{
+    static int x = 2;
+    
+    static void faz(int y){
+        System.out.println(y);
     }
 }
