@@ -1,3 +1,5 @@
+import sun.util.locale.provider.AuxLocaleProviderAdapter;
+
 class AreaPiscina {
     // Materias da piscina
     static final int alvenaria = 0;
@@ -6,7 +8,7 @@ class AreaPiscina {
     static final int plastico = 3;
 
     // Preço dos materiais
-    static double[] precos = {1500, 1100, 750, 500};
+    double[] precos;
 
     // Nomes dos materiais
     static char[][] nomes = {
@@ -18,6 +20,28 @@ class AreaPiscina {
     // Calcula a área da piscina
     static double area(double raio){
         return (raio >= 0 ? (Math.PI * Math.pow(raio, 2)) : -1);
+    }
+    AreaPiscina(){
+    double[] aux = {1500, 1100, 750, 500};
+    this.precos = aux;
+    this.raio = 10;
+    }
+    AreaPiscina(double[] precos){
+        this.precos = precos;
+        this.raio = 10;
+    }
+    
+    AreaPiscina(double raio) {
+        this()
+        this.raio = raio;
+    }
+    double area(){
+        return (this.raio >= 0) ? Math.PI * Math.pow(this.raio, 2) : -1);
+        }
+    
+    AreaPiscina(double[] precos) {
+        this.precos = precos;
+        this.raio = 10;
     }
 
     // Calcula o valor do metro quadrado para piscina

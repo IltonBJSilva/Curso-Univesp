@@ -1,14 +1,24 @@
 class AreaCasa {    
     // Valor do metro quadrado da casa
-    double valorM2;
-    AreaCasa(double val) {
-        valorM2 = val;
-    }
-    AreaCasa(){
-        this(1500.0);
-    }
+    double valorM2 = 1500;
 
+    // comprimento da lateral da sala
+    double lateral = 10;
+
+    // comprimento da lateral maior do quarto
+    double cquarto = 10;
+    
+    AreaCasa(){}
+    
     AreaCasa(double valorM2){
+        this.valorM2 = valorM2;
+    }
+    AreaCasa(double lateral, double cquarto) {
+        this.lateral = lateral;
+        this.cquarto = cquarto;
+    }
+    AreaCasa(double lateral, double cquarto, double valorM2){
+        this(lateral, cquarto);
         this.valorM2 = valorM2;
     }
     // Calcula a area da casa
@@ -16,10 +26,6 @@ class AreaCasa {
 
     // Verifica se os valores são positivos
     if (lateral >= 0 && cquarto >= 0){
-        double areaQuarto; // Area do quarto
-        double areaSala; // Area da sala
-        double areat; // Area total
-
         System.out.println("Programa para calculo da area da casa");
         areaSala = lateral * lateral;
         System.out.println("A area da sala e " + areaSala);
@@ -33,20 +39,20 @@ class AreaCasa {
         System.out.println("Erro: parametro < 0");
     }
 
-    static double area(double lateral, double cquarto) {
+    static double area() {
         double areat =-1;  //Area total
 
         // Verifica se os valores são positivos
-        if (lateral >= 0 && cquarto >= 0) {
-            areat = lateral*lateral;
-            areat += cquarto*lateral;
+        if (this.lateral >= 0 && this.cquarto >= 0) {
+            areat = this.lateral*this.lateral;
+            areat += this.cquarto*this.lateral;
 
         } 
         return (areat);
     }
     // Calcula o valor total da casa
     static double valor(double area){
-        if(area >= 0) return (valorM2*area);
+        if(area >= 0) return (this.valorM2*area);
         return(-1);
     }
 
