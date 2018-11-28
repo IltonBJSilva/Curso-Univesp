@@ -1,7 +1,16 @@
 class AreaCasa {    
     // Valor do metro quadrado da casa
-    static double valorM2 = 1500;
+    double valorM2;
+    AreaCasa(double val) {
+        valorM2 = val;
+    }
+    AreaCasa(){
+        this(1500.0);
+    }
 
+    AreaCasa(double valorM2){
+        this.valorM2 = valorM2;
+    }
     // Calcula a area da casa
     static void areaCasal(double lateral, double cquarto){
 
