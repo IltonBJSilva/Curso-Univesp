@@ -1,4 +1,4 @@
-class AreaCasa {
+class AreaCasa {    
     // Valor do metro quadrado da casa
     static double valorM2 = 1500;
 
@@ -11,20 +11,20 @@ class AreaCasa {
         double areaSala; // Area da sala
         double areat; // Area total
 
-        System.out.println("Programa para cálculo da área da casa");
+        System.out.println("Programa para calculo da area da casa");
         areaSala = lateral * lateral;
-        System.out.println("A área da sala é " + areaSala);
+        System.out.println("A area da sala e " + areaSala);
         areaQuarto = cquarto * (lateral / 2);
-        System.out.println("A área do quarto é " + areaQuarto);
-        System.out.println("A área do banheiro é " + areaQuarto);
+        System.out.println("A area do quarto e " + areaQuarto);
+        System.out.println("A area do banheiro e " + areaQuarto);
         areat = areaSala + 2 * areaQuarto;
-        System.out.println("A área total é " + areat);
+        System.out.println("A area total e " + areat);
     }
     else
-        System.out.println("Erro: parâmetro < 0");
+        System.out.println("Erro: parametro < 0");
     }
 
-    static void area(double lateral, double cquarto) {
+    static double area(double lateral, double cquarto) {
         double areat =-1;  //Area total
 
         // Verifica se os valores são positivos

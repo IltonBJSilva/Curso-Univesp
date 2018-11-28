@@ -4,17 +4,18 @@ class projeto {
         return(AreaCasa.area(lateral,cquarto)+ AreaPiscina.area(raio));
     }
     public static void main(String[] args){
+        // AreaCasa e visivel para todos mas casa1 não
+        AreaCasa casa1 = new AreaCasa();
+        AreaCasa casa2 = new AreaCasa();
+        System.out.println(casa1.valor(casa1.area(15, 10)));
+        System.out.println(casa1.valor(casa2.area(18,8)));
+
         double valorM2_ant = AreaCasa.valorM2;
-        
-        //preço da casa 1 (sem piscina)
-        System.out.println(AreaCasa.valor(AreaCasa.area(15,10) ) );
 
 
         //Novo valor do m2
         AreaCasa.valorM2 = 1270;
 
-        //pre�o da casa 2(sem piscina)
-        System.out.println(AreaCasa.valor(AreaCasa.area(18,8) ) );
 
         //resturar o valor anterior
         AreaCasa.valorM2 = valorM2_ant;
