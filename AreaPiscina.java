@@ -26,30 +26,26 @@ class AreaPiscina {
     this.precos = aux;
     this.raio = 10;
     }
-    AreaPiscina(double[] precos){
+
+    AreaPiscina(double[] precos) {
         this.precos = precos;
         this.raio = 10;
     }
-    
     AreaPiscina(double raio) {
-        this()
         this.raio = raio;
     }
     double area(){
         return (this.raio >= 0) ? Math.PI * Math.pow(this.raio, 2) : -1);
         }
     
-    AreaPiscina(double[] precos) {
-        this.precos = precos;
-        this.raio = 10;
-    }
 
     // Calcula o valor do metro quadrado para piscina
     static double valor(double area, int material){
         if(material < alvenaria || material > plastico || area < 0)
             return(-1);
-
-        return (area * precos[material]);
+        else{
+            return (area * precos[material]);
+        }
     }
 
     static double[][] calculaFinal(double[][] val, double[][] desc){
