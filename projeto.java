@@ -20,54 +20,29 @@ class projeto {
         return(casa.area() + piscina.area());
     }
     public static void main(String[] args){
-
+        projeto pr = new projeto(5);
+        for(int i=0; i<pr.condominio.length; i++){
         
-        System.out.println(proj.condominio[1].casa.area());
-
-
-        double valorM2_ant = AreaCasa.valorM2;
-
-
-        //Novo valor do m2
-        AreaCasa.valorM2 = 1270;
-
-
-        //resturar o valor anterior
-        AreaCasa.valorM2 = valorM2_ant;
-        
-    
+        AreaCasa c = new AreaCasa();
+        AreaPiscina p = new AreaPiscina (i+2);
+        Residencia r = new Residencia(c,p);
+        pr.adicionaRes(r);
+        }
+        System.out.println(pr.buscaPiscSeq(3));
+        System.out.println(pr.buscaPiscSeq(15));
     }
-
-    private static Projeto extracted2() {
-        Projeto proj = extracted();
-        return proj;
-    }
-
-    private static Projeto extracted() {
-        Projeto proj = new projeto(3);
-        return proj;
-            }
             
 
-        int buscaSeq(double raio) {
+        int buscaPiscSeq(double raio) {
             for (int i = 0; i < this.condominio.length; i++)
                 if (this.condominio[i].piscina.raio == raio)
                     return (i);
             return (-1);
 
         }
+      
 
-    public static void main(String args[]) {
-            int[] v = { 9, 8, 4, 6, 3, 4 };
 
-            // Vai mandar v pro metodo de busca como paramentro
-            // v = arr e 4 = el
-            System.out.println(buscaSeq(v, 4));
-            System.out.println(buscaSeq(v, 12));
-
-        
-
-        }
 }
     
 
