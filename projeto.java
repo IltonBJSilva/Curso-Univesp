@@ -47,7 +47,28 @@ class projeto {
         Projeto proj = new projeto(3);
         return proj;
             }
+            
+
+        int buscaSeq(double raio) {
+            for (int i = 0; i < this.condominio.length; i++)
+                if (this.condominio[i].piscina.raio == raio)
+                    return (i);
+            return (-1);
+
         }
+
+    public static void main(String args[]) {
+            int[] v = { 9, 8, 4, 6, 3, 4 };
+
+            // Vai mandar v pro metodo de busca como paramentro
+            // v = arr e 4 = el
+            System.out.println(buscaSeq(v, 4));
+            System.out.println(buscaSeq(v, 12));
+
+        
+
+        }
+}
     
 
  
