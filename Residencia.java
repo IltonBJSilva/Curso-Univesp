@@ -6,5 +6,10 @@ class Residencia {
         this.piscina = piscina;
     }
         public static void main(String[] args) {
+        
+    
+  
     }
+    
+ 
 }
