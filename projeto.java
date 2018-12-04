@@ -30,7 +30,6 @@ class projeto {
         }
         System.out.println(pr.buscaPiscSeq(3));
         System.out.println(pr.buscaPiscSeq(15));
-        System.out.println(Residencia.buscaBin(r, 10));
     }
             
 
@@ -42,20 +41,7 @@ class projeto {
 
         }
       
-    static int buscaBin(Residencia[] arr, double area) {
-        int fim = arr.length - 1;
-        int ini = 0;
-        while (ini <= fim) {
-            int meio = (fim + ini) / 2;
-            if (arr[meio].area() < area)
-                ini = meio + 1;
-            else if (arr[meio].areac() > area)
-                fim = meio - 1;
-            else
-                return (meio);
-        }
-        return (-1);
-    }
+
 
 
 }
