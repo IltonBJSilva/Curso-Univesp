@@ -1,5 +1,5 @@
 
-class projeto {
+class Projeto {
     Residencia[] condominio;
     int ultimo = -1; //ultimo alocado
 
@@ -11,7 +11,7 @@ class projeto {
         }
         return (false);
     }
-    projeto(int tam){
+    Projeto(int tam){
         condominio = new Residencia[tam];
     }
 
@@ -20,17 +20,23 @@ class projeto {
         return(casa.area() + piscina.area());
     }
     public static void main(String[] args){
-        projeto pr = new projeto(5);
+        Projeto pr = new Projeto(5);
         for(int i=0; i<pr.condominio.length; i++){
         
-        AreaCasa c = new AreaCasa();
-        AreaPiscina p = new AreaPiscina (i+2);
+        AreaCasa c = new AreaCasa(
+            Math.random()*100,Math.random()*30);
+        AreaPiscina p = new AreaPiscina ( Math.random()*10);
         Residencia r = new Residencia(c,p);
         pr.adicionaRes(r);
         }
-        System.out.println(pr.buscaPiscSeq(3));
-        System.out.println(pr.buscaPiscSeq(15));
+        for(Residencia r : pr.condominio)
+            System.out.println(r.area());
+        System.out.println();
+        insercao(pr.condominio);
+        for(Residencia r : pr.condominio)
+            System.out.println(r.area());
     }
+    
             
 
         int buscaPiscSeq(double raio) {
