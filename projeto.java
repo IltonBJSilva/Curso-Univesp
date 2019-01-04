@@ -2,7 +2,7 @@
 class Projeto {
     Residencia[] condominio;
     int ultimo = -1; //ultimo alocado
-
+    //Codigo do projeto
     boolean adicionaRes(Residencia r){ // abre
         if(this.ultimo < this.condominio.length-1){
             ultimo++;
