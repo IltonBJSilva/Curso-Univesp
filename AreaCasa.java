@@ -19,7 +19,6 @@ class AreaCasa {
         this(lateral, cquarto);
         this.valorM2 = valorM2;
     } 
-    
 
     // Calcula a área da cas a
     double area(){
@@ -29,7 +28,6 @@ class AreaCasa {
             areat = this.lateral * this.lateral;
             areat += this.cquarto * this.lateral;
         }
-
         return (areat); 
     }
 
@@ -37,7 +35,6 @@ class AreaCasa {
     double valor(double area){
         return (area >= 0 ? this.valorM2 * area : -1);
     } 
-
     public static void main(String[] args){
 
     }

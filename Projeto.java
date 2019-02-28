@@ -12,7 +12,7 @@ class Projeto {
         return (false);
     }
     Projeto(int tam){
-        condominio = new Residencia[tam];
+        Residencia condominio = new Residencia();
     }
 
     /*Calcular a Area de uma casa com piscina*/

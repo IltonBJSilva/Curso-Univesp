@@ -69,10 +69,7 @@ class AreaPiscina {
             }
         }
     }
-
     public static void main(String[] args) {
         // Aqui vão os testes
-
     }
-
 }
