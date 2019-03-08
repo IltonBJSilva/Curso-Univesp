@@ -11,6 +11,7 @@ class Projeto {
         }
         return (false);
     }
+    
     Projeto(int tam){
         Residencia condominio = new Residencia();
     }
@@ -29,6 +30,7 @@ class Projeto {
         Residencia r = new Residencia(c,p);
         pr.adicionaRes(r);
         }
+
         for(Residencia r : pr.condominio)
             System.out.println(r.area());
         System.out.println();
@@ -36,8 +38,6 @@ class Projeto {
         for(Residencia r : pr.condominio)
             System.out.println(r.area());
     }
-    
-            
 
         int buscaPiscSeq(double raio) {
             for (int i = 0; i < this.condominio.length; i++)
@@ -46,12 +46,4 @@ class Projeto {
             return (-1);
 
         }
-      
-
-
-
 }
-    
-
- 
-
