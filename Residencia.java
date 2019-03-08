@@ -20,7 +20,8 @@ class Residencia {
         this.casa = casa;
         this.piscina = piscina;
     }
-        public static void main(String[] args) {
+    
+    public static void main(String[] args) {
             
             //criando as variaveis nos respectivos tipos
             AreaCasa c = new AreaCasa();

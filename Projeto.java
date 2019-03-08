@@ -39,11 +39,10 @@ class Projeto {
             System.out.println(r.area());
     }
 
-        int buscaPiscSeq(double raio) {
-            for (int i = 0; i < this.condominio.length; i++)
-                if (this.condominio[i].piscina.raio == raio)
-                    return (i);
-            return (-1);
-
+    int buscaPiscSeq(double raio) {
+        for (int i = 0; i < this.condominio.length; i++)
+            if (this.condominio[i].piscina.raio == raio)
+                return (i);
+                return (-1);
         }
 }
